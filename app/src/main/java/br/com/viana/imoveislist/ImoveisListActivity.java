@@ -13,6 +13,7 @@ import br.com.viana.imoveislist.model.Imovel;
 public class ImoveisListActivity extends AppCompatActivity {
 
     ListView imoveisListView;
+    Imovel imovel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,7 @@ public class ImoveisListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Imovel imovel = (Imovel) imoveisListView.getItemAtPosition(position);
                 Intent intentImovelInsert = new Intent(ImoveisListActivity.this, ImoveisNewActivity.class);
-                //intentImovelInsert.putExtra("imovel", (Parcelable) imovel);
+                //intentImovelInsert.putExtra("imovel", imovel);
                 startActivity(intentImovelInsert);
             }
         });

@@ -15,14 +15,14 @@
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:id="@+id/studentInsert_imageViewPhoto"
+                android:id="@+id/imoveisList_photo"
                 android:background="#00A8EC"
                 android:src="@drawable/person" />
 
             <Button
                 android:layout_width="56dp"
                 android:layout_height="56dp"
-                android:id="@+id/studentInsert_buttonPhoto"
+                android:id="@+id/imoveisList_buttonPhoto"
                 android:background="@drawable/this_background_button_camera"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
@@ -47,6 +47,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Preço"/>
+
+        <EditText
+            android:id="@+id/imoveisList_contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contato"/>
 
         <RatingBar
             android:id="@+id/imoveisList_note"

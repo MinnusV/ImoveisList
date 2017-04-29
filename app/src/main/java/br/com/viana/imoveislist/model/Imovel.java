@@ -9,8 +9,17 @@ public class Imovel {
     private String name;
     private String price;
     private String address;
+    private String contato;
     private Double note;
     private String photo;
+
+    public String getContato() {
+        return contato;
+    }
+
+    public void setContato(String contato) {
+        this.contato = contato;
+    }
 
     public String getPhoto() {
         return photo;
