@@ -35,8 +35,13 @@ public class ImoveisListActivity extends AppCompatActivity {
         });
 
         Button newButton = (Button) findViewById(R.id.imoveisInsert_buttonNew);
-
-
+        newButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentImovelNew = new Intent(ImoveisListActivity.this, ImoveisInsertActivity.class);
+                startActivity(intentImovelNew);
+            }
+        });
 
     }
 }
