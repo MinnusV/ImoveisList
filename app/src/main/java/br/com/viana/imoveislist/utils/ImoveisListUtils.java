@@ -2,9 +2,7 @@ package br.com.viana.imoveislist.utils;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
-import android.text.Editable;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -61,7 +59,7 @@ public class ImoveisListUtils {
         this.imovel.setName(nome);
         this.imovel.setAddress(endereco);
         this.imovel.setPrice(preco);
-        this.imovel.setContato(contato);
+        this.imovel.setContact(contato);
         this.imovel.setNote(Double.valueOf(nota));
         this.imovel.setPhoto(pathPhoto);
 
@@ -72,7 +70,7 @@ public class ImoveisListUtils {
         txtNome.setText(editImovel.getName());
         txtEndereco.setText(editImovel.getAddress());
         txtPreco.setText(editImovel.getPrice());
-        txtContato.setText(editImovel.getContato());
+        txtContato.setText(editImovel.getContact());
         ratingNote.setRating(editImovel.getNote().floatValue());
 
         if (editImovel.getPhoto() != null){

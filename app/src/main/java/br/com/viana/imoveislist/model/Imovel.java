@@ -6,19 +6,28 @@ package br.com.viana.imoveislist.model;
 
 public class Imovel {
 
+    private Long id;
     private String name;
     private String price;
     private String address;
-    private String contato;
+    private String contact;
     private Double note;
     private String photo;
 
-    public String getContato() {
-        return contato;
+    public Long getId() {
+        return id;
     }
 
-    public void setContato(String contato) {
-        this.contato = contato;
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getPhoto() {
