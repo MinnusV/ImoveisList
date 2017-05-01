@@ -1,10 +1,12 @@
 package br.com.viana.imoveislist.model;
 
+import java.io.Serializable;
+
 /**
  * Created by Vinicius Viana on 28/04/2017.
  */
 
-public class Imovel {
+public class Imovel implements Serializable {
 
     private Long id;
     private String name;

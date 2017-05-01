@@ -105,7 +105,7 @@ public class ImoveisDAO extends SQLiteOpenHelper {
         imoveisVlues.put("price", imovel.getPrice());
         imoveisVlues.put("contact", imovel.getContact());
         imoveisVlues.put("note", imovel.getNote());
-        imoveisVlues.put("note", imovel.getPhoto());
+        imoveisVlues.put("pathPhoto", imovel.getPhoto());
 
         return imoveisVlues;
     }

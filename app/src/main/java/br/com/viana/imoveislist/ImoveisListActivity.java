@@ -40,7 +40,7 @@ public class ImoveisListActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Imovel imovel = (Imovel) imoveisListView.getItemAtPosition(position);
                 Intent intentImovelInsert = new Intent(ImoveisListActivity.this, ImoveisNewActivity.class);
-                //intentImovelInsert.putExtra("imovel", imovel);
+                intentImovelInsert.putExtra("imovel", imovel);
                 startActivity(intentImovelInsert);
             }
         });
@@ -64,7 +64,7 @@ public class ImoveisListActivity extends AppCompatActivity {
         final ImoveisDAO imoveisDAO = new ImoveisDAO(ImoveisListActivity.this);
 
         MenuItem deleteMenuItem = menu.add("Delete");
-        final MenuItem locateMenuItem = menu.add("Localização");
+        MenuItem locateMenuItem = menu.add("Localização");
 
         buildRemoveItem(imovel, imoveisDAO, deleteMenuItem);
         buildLocateImovel(imovel, locateMenuItem);

@@ -45,7 +45,7 @@ public class ImovelAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        Imovel imovel = new Imovel();
+        Imovel imovel = this.imovels.get(position);
 
         LayoutInflater inflater = LayoutInflater.from(context);
 
