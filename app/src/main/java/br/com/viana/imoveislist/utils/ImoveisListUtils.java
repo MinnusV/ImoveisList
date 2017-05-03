@@ -37,16 +37,16 @@ public class ImoveisListUtils {
     public Imovel buildImovelForInsert() throws Exception{
 
         if (txtNome.getText().toString().equals("")){
-            throw new Exception("Campo nome obrigatório");
+            throw new Exception("Campo 'nome' obrigatório");
         }
         if (txtEndereco.getText().toString().equals("")){
-            throw new Exception("Campo nome obrigatório");
+            throw new Exception("Campo 'endereço' obrigatório");
         }
         if (txtPreco.getText().toString().equals("")){
-            throw new Exception("Campo nome obrigatório");
+            throw new Exception("Campo 'preço' obrigatório");
         }
         if (txtContato.getText().toString().equals("")){
-            throw new Exception("Campo nome obrigatório");
+            throw new Exception("Campo 'contato' obrigatório");
         }
 
         String nome = txtNome.getText().toString();

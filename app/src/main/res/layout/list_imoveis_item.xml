@@ -16,22 +16,54 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/imovelList_textViewName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imovelList_textViewName"
+            android:paddingLeft="10dp"
             android:text="name"
             android:textSize="20dp"
-            android:textStyle="bold"
-            android:paddingLeft="10dp"/>
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/imovelList_textViewPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/imovelList_textViewPrice"
+            android:layout_below="@+id/imovelList_textViewName"
+            android:paddingLeft="10dp"
             android:text="price"
             android:textSize="15dp"
-            android:textStyle="bold"
-            android:paddingLeft="10dp"/>
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imovelList_Phone"
+                android:src="@drawable/ic_phone"
+                android:paddingLeft="10dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imovelList_Map"
+                android:src="@drawable/ic_map"
+                android:paddingLeft="10dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/imovelList_Star"
+                android:src="@drawable/ic_star"
+                android:paddingLeft="10dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

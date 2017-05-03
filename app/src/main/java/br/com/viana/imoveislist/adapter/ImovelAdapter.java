@@ -1,17 +1,22 @@
 package br.com.viana.imoveislist.adapter;
 
+import android.Manifest;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.media.Image;
+import android.support.v4.app.ActivityCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 
+import br.com.viana.imoveislist.ImoveisListActivity;
 import br.com.viana.imoveislist.R;
 import br.com.viana.imoveislist.model.Imovel;
 
@@ -59,6 +64,21 @@ public class ImovelAdapter extends BaseAdapter {
 
         TextView imovelPrice = (TextView) view.findViewById(R.id.imovelList_textViewPrice);
         imovelPrice.setText(imovel.getPrice());
+
+        ImageView imovelPhone = (ImageView) view.findViewById(R.id.imovelList_Phone);
+        if(imovel.getContact() != null){
+            imovelPhone.setVisibility(View.VISIBLE);
+        }
+
+        ImageView imovelMap = (ImageView) view.findViewById(R.id.imovelList_Map);
+        if (imovel.getAddress() != null){
+            imovelMap.setVisibility(View.VISIBLE);
+        }
+
+        ImageView imovelStar = (ImageView) view.findViewById(R.id.imovelList_Star);
+        if (imovel.getNote() != 0.0){
+            imovelStar.setVisibility(View.VISIBLE);
+        }
 
         ImageView imovelPhoto = (ImageView) view.findViewById(R.id.imovelList_imageViewPhoto);
         if (imovel.getPhoto() != null){
