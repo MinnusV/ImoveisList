@@ -80,6 +80,13 @@ public class ImovelAdapter extends BaseAdapter {
             imovelStar.setVisibility(View.VISIBLE);
         }
 
+        ImageView imovelAvalible = (ImageView) view.findViewById(R.id.imovelList_avalible);
+        if (imovel.getStatus().equals("A Venda")){
+            imovelAvalible.setImageResource(R.drawable.ic_check);
+        }else if (imovel.getStatus().equals("Vendido")){
+            imovelAvalible.setImageResource(R.drawable.ic_cross);
+        }
+
         ImageView imovelPhoto = (ImageView) view.findViewById(R.id.imovelList_imageViewPhoto);
         if (imovel.getPhoto() != null){
             Bitmap bitmap = BitmapFactory.decodeFile(imovel.getPhoto());

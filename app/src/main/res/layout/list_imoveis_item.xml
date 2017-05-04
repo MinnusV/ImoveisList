@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <ImageView
         android:layout_width="64dp"
@@ -11,9 +12,10 @@
         android:id="@+id/imovelList_imageViewPhoto"/>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="262dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/imovelList_textViewName"
@@ -40,30 +42,36 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
                 android:id="@+id/imovelList_Phone"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingLeft="10dp"
                 android:src="@drawable/ic_phone"
-                android:paddingLeft="10dp"
-                android:visibility="gone"/>
+                android:visibility="gone" />
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
                 android:id="@+id/imovelList_Map"
-                android:src="@drawable/ic_map"
-                android:paddingLeft="10dp"
-                android:visibility="gone"/>
-
-            <ImageView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:id="@+id/imovelList_Star"
-                android:src="@drawable/ic_star"
                 android:paddingLeft="10dp"
-                android:visibility="gone"/>
+                android:src="@drawable/ic_map"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/imovelList_Star"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:paddingLeft="10dp"
+                android:src="@drawable/ic_star"
+                android:visibility="gone" />
 
         </LinearLayout>
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imovelList_avalible"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:src="@drawable/ic_check" />
 
 </LinearLayout>
