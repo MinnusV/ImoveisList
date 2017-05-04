@@ -17,7 +17,7 @@ import br.com.viana.imoveislist.model.Imovel;
 
 public class ImoveisDAO extends SQLiteOpenHelper {
     public ImoveisDAO(Context context) {
-        super(context, "ImoveisList", null, 1);
+        super(context, "ImoveisLista", null, 2);
     }
 
     @Override
@@ -30,7 +30,8 @@ public class ImoveisDAO extends SQLiteOpenHelper {
                 "price TEXT NOT NULL," +
                 "contact TEXT NOT NULL," +
                 "note REAL NOT NULL," +
-                "pathPhoto TEXT)";
+                "pathPhoto TEXT," +
+                "status TEXT DEFAULT 'A Venda')";
 
         db.execSQL(sqlCreateTableImoveis);
     }
@@ -39,7 +40,7 @@ public class ImoveisDAO extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         switch (oldVersion){
             case 1:
-                String sql_Version1 = "ALTER TABLE Imoveis ADD COLUMN pathPhoto TEXT";
+                String sql_Version1 = "ALTER TABLE Imoveis ADD COLUMN status TEXT DEFAULT 'A Venda'";
 
                 db.execSQL(sql_Version1);
                 break;
@@ -72,6 +73,7 @@ public class ImoveisDAO extends SQLiteOpenHelper {
             imovel.setContact(cursorReadImoveis.getString(cursorReadImoveis.getColumnIndex("contact")));
             imovel.setNote(cursorReadImoveis.getDouble(cursorReadImoveis.getColumnIndex("note")));
             imovel.setPhoto(cursorReadImoveis.getString(cursorReadImoveis.getColumnIndex("pathPhoto")));
+            imovel.setStatus(cursorReadImoveis.getString(cursorReadImoveis.getColumnIndex("status")));
 
             imoveis.add(imovel);
         }
@@ -106,6 +108,7 @@ public class ImoveisDAO extends SQLiteOpenHelper {
         imoveisVlues.put("contact", imovel.getContact());
         imoveisVlues.put("note", imovel.getNote());
         imoveisVlues.put("pathPhoto", imovel.getPhoto());
+        imoveisVlues.put("status", imovel.getStatus());
 
         return imoveisVlues;
     }

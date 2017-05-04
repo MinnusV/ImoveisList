@@ -54,6 +54,33 @@
             android:layout_height="wrap_content"
             android:hint="Contato"/>
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:textSize="18dp"
+            android:paddingLeft="5dp"/>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/imoveisList_RadioGroup">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imoveisList_A_Venda"
+                android:checked="true"
+                android:text="A Venda"/>
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imoveisList_Vendido"
+                android:text="Vendido"/>
+        </RadioGroup>
+
         <RatingBar
             android:id="@+id/imoveisList_note"
             android:layout_width="wrap_content"
