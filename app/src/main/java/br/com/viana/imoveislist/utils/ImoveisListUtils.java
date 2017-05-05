@@ -67,7 +67,15 @@ public class ImoveisListUtils {
         String preco = txtPreco.getText().toString();
         String contato = txtContato.getText().toString();
         Float nota = ratingNote.getRating();
-        String pathPhoto = image.getTag().toString();
+
+        String pathPhoto;
+
+        if (image.getTag() != null){
+            pathPhoto = image.getTag().toString();
+        }else{
+            pathPhoto = null;
+        }
+
         String aVendaCheck, vendidoCheck;
 
         int idRadioButton = statusImovel.getCheckedRadioButtonId();
@@ -103,6 +111,8 @@ public class ImoveisListUtils {
             image.setScaleType(ImageView.ScaleType.FIT_XY);
             image.setImageBitmap(bitmapReduce);
             image.setTag(editImovel.getPhoto());
+        }else{
+            image.setImageResource(R.drawable.person);
         }
 
         if (btnAvenda.isChecked() || btnVendido.isChecked()){
