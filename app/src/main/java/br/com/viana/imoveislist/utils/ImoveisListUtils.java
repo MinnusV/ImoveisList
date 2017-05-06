@@ -112,7 +112,7 @@ public class ImoveisListUtils {
             image.setImageBitmap(bitmapReduce);
             image.setTag(editImovel.getPhoto());
         }else{
-            image.setImageResource(R.drawable.person);
+            image.setImageResource(R.drawable.home);
         }
 
         if (btnAvenda.isChecked() || btnVendido.isChecked()){

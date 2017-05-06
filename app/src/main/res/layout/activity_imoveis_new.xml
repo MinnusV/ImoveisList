@@ -17,7 +17,7 @@
                 android:layout_height="200dp"
                 android:id="@+id/imoveisList_photo"
                 android:background="#00A8EC"
-                android:src="@drawable/person" />
+                android:src="@drawable/home" />
 
             <Button
                 android:layout_width="56dp"
